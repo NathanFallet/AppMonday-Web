@@ -74,13 +74,13 @@
     </div><!--//hero-->
 
     <div id="submit" class="about-section">
-        <div class="container text-center">
-            <h2 class="section-title">Submit your app!</h2>
-            <p class="intro">Here is our form</p>
+        <div class="container">
+            <h2 class="section-title text-center">Submit your app!</h2>
+            <p class="intro text-center">Here is our form</p>
 
             <div class="items-wrapper row">
-
                 <form id="form" class="col-md-6">
+                    <div id="error-space"></div>
                     <div class="form-group">
                       <label for="name">App name:</label>
                       <input type="text" class="form-control" id="name" placeholder="My app">
@@ -104,7 +104,11 @@
                     <input type="submit" class="btn btn-primary btn-cta" value="Submit">
                 </form>
                 <div class="col-md-6">
-                  <p>Fill this form blabla...</p>
+                  <p>Fill this form to send us your app.</p>
+                  <p>First, give us your app name (name of the project).</p>
+                  <p>Then, write a short description to explain what it is about.</p>
+                  <p>Give us your Instagram username to mention you in our story and make people find you.</p>
+                  <p>Give us your app link, and a logo (an image link).</p>
                 </div>
             </div>
         </div><!--//container-->

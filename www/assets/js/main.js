@@ -41,7 +41,7 @@ document.getElementById('form').onsubmit = function(){
       logo: logo,
       description: description
     }
-    ajaxPost('https://apps.nathanfallet.me/appmonday/index.php', data, function response(response) {
+    ajaxPost('https://api.appmonday.xyz/index.php', data, function response(response) {
       var data = JSON.parse(response);
       if(data.success){
         success();
@@ -69,7 +69,7 @@ function loadApps() {
     start: window.loaded_apps,
     limit: 10
   }
-  ajaxPost('https://apps.nathanfallet.me/appmonday/index.php', data, function response(response) {
+  ajaxPost('https://api.appmonday.xyz/index.php', data, function response(response) {
     var data = JSON.parse(response);
     if(data.success){
       delete data['success'];
@@ -104,7 +104,7 @@ function  createAppElement(app) {
   mediap.innerHTML = 'Submitted by <a href="https://instagram.com/'+app.user+'">'+app.user+'</a>';
   var mediaimg = document.createElement('img');
   mediaimg.classList.add('media-object');
-  mediaimg.src = app.logo !== '' ? app.logo : 'https://appmonday.nathanfallet.me/images/AppMondayRadius.png';
+  mediaimg.src = app.logo !== '' ? app.logo : 'https://www.appmonday.xyz/assets/images/AppMondayRadius.png';
   mediaimg.style.width = '50px';
   mediaimg.style.height = '50px';
   medialeft.appendChild(mediaimg);
@@ -124,35 +124,24 @@ function clear() {
 
 function success() {
   clear();
-  var contentbox = document.getElementById('content');
+  var contentbox = document.getElementById('error-space');
   var success = document.createElement('div');
-  success.classList.add('success');
   success.classList.add('status');
-  success.classList.add('animatedbox');
+  success.classList.add('alert');
+  success.classList.add('alert-success');
   success.innerHTML = 'Your app has been submitted! Follow us on Instragram to see it in our story.';
   contentbox.prepend(success);
 }
 
 function error(message) {
   clear();
-  var contentbox = document.getElementById('content');
+  var contentbox = document.getElementById('error-space');
   var error = document.createElement('div');
-  error.classList.add('error');
   error.classList.add('status');
-  error.classList.add('animatedbox');
+  error.classList.add('alert');
+  error.classList.add('alert-danger');
   error.innerHTML = 'An error occurred: '+message;
   contentbox.prepend(error);
-}
-
-function show(id) {
-  document.getElementById('box-first').style = 'display: none;';
-  document.getElementById('box-second').style = 'display: none;';
-  document.getElementById('box-third').style = 'display: none;';
-  document.getElementById('box-'+id).style = '';
-  document.getElementById('menu-first').classList.remove('active');
-  document.getElementById('menu-second').classList.remove('active');
-  document.getElementById('menu-third').classList.remove('active');
-  document.getElementById('menu-'+id).classList.add('active');
 }
 
 // Template script
