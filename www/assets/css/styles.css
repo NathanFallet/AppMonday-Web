@@ -620,7 +620,11 @@ a:focus {
 }
 
 .testimonials-section .media-body {
-  margin-left: 10px;
+  margin-left: 20px;
+}
+
+.testimonials-section .item .media-object {
+  border-radius: 18%;
 }
 
 /* ======= Features Section ======= */
