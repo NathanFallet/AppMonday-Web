@@ -101,6 +101,7 @@
                       <label for="logo">App logo: (optional - square)</label>
                       <input type="text" class="form-control" id="logo" placeholder="https://">
                     </div>
+                    <input type="checkbox" required name="terms"> By checking this checkbox, I agree that the informations provided in the form will be saved in Groupe MINASTE's databases. I am aware that they may be publicly available, without any warranty. I declare the submitted content as children-friendly. I also state that the provided content does not promote hate, discrimination and does not contain sensitive content. I am aware that even if the informations are not publicly submitted, they will still be saved in the databases. I am aware that I can request a copy, a modification or a deletion according to the GDPR by sending an email to <a href="mailto:support@groupe-minaste.org">support@groupe-minaste.org</a> or by postal service as described in our french legal mentions (paragraph 7.3). In both cases, I will send a photocopy of my ID for my request to be processed.
                     <input type="submit" class="btn btn-primary btn-cta" value="Submit">
                 </form>
                 <div class="col-md-6">
