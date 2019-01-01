@@ -123,7 +123,7 @@
 
     <footer class="footer text-center">
         <div class="container">
-            <p>AppMonday developed by Nathan Fallet - In association with Code Community - &copy; Groupe MINASTE</p>
+            <p>AppMonday developed by Nathan Fallet - In association with Code Community - &copy; 2019 Groupe MINASTE - <a href=https://www.appmonday.xyz/mentions-legales.html>Mentions légales [FR]</a></p>
             <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
             <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com/" target="_blank">Xiaoying Riley</a> for developers</small>
 
