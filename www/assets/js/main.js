@@ -107,7 +107,7 @@ function  createAppElement(app) {
   mediap2.innerHTML = 'Submitted by <a href="https://instagram.com/'+app.user+'">'+app.user+'</a>';
   var mediaimg = document.createElement('img');
   mediaimg.classList.add('media-object');
-  mediaimg.src = app.logo !== '' ? app.logo : 'https://www.appmonday.xyz/assets/images/AppMondayRadius.png';
+  mediaimg.src = app.logo !== '' ? app.logo : 'https://www.appmonday.xyz/assets/images/NoLogo.png';
   mediaimg.style.width = '70px';
   medialeft.appendChild(mediaimg);
   mediabody.appendChild(mediaheading);
