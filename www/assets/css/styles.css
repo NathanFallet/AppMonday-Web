@@ -542,6 +542,7 @@ a:focus {
   position: relative;
   max-width: 800px;
   padding: 30px;
+  margin-bottom: 30px;
   background: #fff;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
 }
