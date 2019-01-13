@@ -62,7 +62,9 @@
 
   				            <h2 class="heading">What is AppMonday?</h2>
   				            <p class="intro">Every Monday, we will share one app you submitted here in our Instagram story. Fill this form and share with us your project! It can be a website, a mobile app, an open source project, ... everything you coded.</p>
-  				            <a class="btn btn-primary btn-cta scrollto" href="#submit">Submit an app</a>
+  				            <p><a class="btn btn-primary btn-cta scrollto" href="#submit">Submit an app</a></p>
+                      <p><a href="https://testflight.apple.com/join/yvP0cxVJ"><img src="assets/images/app-store-badge.png" width="177px"></a></p>
+                      <p><a href="https://play.google.com/store/apps/details?id=me.nathanfallet.appmonday"><img src="assets/images/google-play-badge.png" width="177px"></a></p>
 
       					</div><!--//item-content-inner-->
   					</div><!--//item-content-->
