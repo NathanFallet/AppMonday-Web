@@ -41,8 +41,8 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="nav-item"><a class="active nav-link scrollto" href="#hero">About</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" href="#submit">Submit an app</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" href="#list">App list</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="#submit">Submit a project</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="#list">Last projects</a></li>
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->
             </nav><!--//main-nav-->
@@ -61,8 +61,8 @@
       					<div class="item-content-inner">
 
   				            <h2 class="heading">What is AppMonday?</h2>
-  				            <p class="intro">Every Monday, we will share one app you submitted here in our Instagram story. Fill this form and share with us your project! It can be a website, a mobile app, an open source project, ... everything you coded.</p>
-  				            <p><a class="btn btn-primary btn-cta scrollto" href="#submit">Submit an app</a></p>
+  				            <p class="intro">Every Monday, we will share one project you submitted here in our Instagram story. Fill this form and share with us your project! It can be a website, a mobile app, an open source project, ... everything you coded.</p>
+  				            <p><a class="btn btn-primary btn-cta scrollto" href="#submit">Submit a project</a></p>
                       <p><a href="https://itunes.apple.com/us/app/appmonday/id1447250726?ls=1&mt=8"><img src="assets/images/app-store-badge.png" width="177px"></a></p>
                       <p><a href="https://play.google.com/store/apps/details?id=me.nathanfallet.appmonday"><img src="assets/images/google-play-badge.png" width="177px"></a></p>
 
@@ -78,15 +78,15 @@
 
     <div id="submit" class="about-section">
         <div class="container">
-            <h2 class="section-title text-center">Submit your app!</h2>
+            <h2 class="section-title text-center">Submit your project!</h2>
             <p class="intro text-center">Here is our form</p>
 
             <div class="items-wrapper row">
                 <form id="form" class="col-md-6">
                     <div id="error-space"></div>
                     <div class="form-group">
-                      <label for="name">App name:</label>
-                      <input type="text" class="form-control" id="name" placeholder="My app">
+                      <label for="name">Project name:</label>
+                      <input type="text" class="form-control" id="name" placeholder="My project">
                     </div>
                     <div class="form-group">
                       <label for="description">Description:</label>
@@ -97,11 +97,11 @@
                       <input type="text" class="form-control" id="user" placeholder="@username">
                     </div>
                     <div class="form-group">
-                      <label for="link">App link:</label>
+                      <label for="link">Project link:</label>
                       <input type="text" class="form-control" id="link" placeholder="https://">
                     </div>
                     <div class="form-group">
-                      <label for="logo">App logo: (optional - square)</label>
+                      <label for="logo">Project logo: (optional - square)</label>
                       <input type="text" class="form-control" id="logo" placeholder="https://">
                     </div>
                     <div class="checkbox">
@@ -110,11 +110,11 @@
                     <input type="submit" class="btn btn-primary btn-cta" value="Submit">
                 </form>
                 <div class="col-md-6">
-                  <p>Fill this form to send us your app.</p>
-                  <p>First, give us your app name (name of the project).</p>
+                  <p>Fill this form to send us your project.</p>
+                  <p>First, give us the name of the project.</p>
                   <p>Then, write a short description to explain what it is about.</p>
                   <p>Give us your Instagram username to mention you in our story and make people find you.</p>
-                  <p>Give us your app link, and a logo (an image link).</p>
+                  <p>Give us your project link, and a logo (an image link).</p>
                 </div>
             </div>
         </div><!--//container-->
@@ -122,14 +122,14 @@
 
     <div id="list" class="testimonials-section">
         <div class="container">
-            <h2 class="section-title text-center">App list</h2>
+            <h2 class="section-title text-center">Last projects</h2>
             <div id="applist"></div>
         </div><!--//container-->
     </div><!--//testimonials-->
 
     <footer class="footer text-center">
         <div class="container">
-            <p>AppMonday developed by Nathan Fallet - In association with Code Community - &copy; 2019 Groupe MINASTE - <a href=https://www.appmonday.xyz/mentions-legales.html>Mentions légales [FR]</a></p>
+            <small>AppMonday developed by <a href="https://www.nathanfallet.me/">Nathan Fallet</a> - In association with Code Community - &copy; 2019 Groupe MINASTE - <a href=https://www.appmonday.xyz/mentions-legales.html>Mentions légales [FR]</a> - Visit our <a href="https://github.com/NathanFallet/AppMonday-Web">GitHub</a></small><br/>
             <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
             <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com/" target="_blank">Xiaoying Riley</a> for developers</small>
 
