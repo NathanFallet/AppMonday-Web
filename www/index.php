@@ -26,7 +26,7 @@
         <div class="container">
             <h1 class="logo">
                 <a class="scrollto" href="#hero">
-                    <span class="logo-icon-wrapper"><img class="logo-icon" src="assets/images/logo-icon.svg" alt="icon"></span>
+                    <span class="logo-icon-wrapper"><img class="logo-icon" src="assets/images/AppMondayRadius.png" alt="icon"></span>
                     <span class="text"><span class="highlight">APP</span>MONDAY</span></a>
             </h1><!--//logo-->
             <nav class="main-nav navbar-expand-md float-right navbar-inverse" role="navigation">

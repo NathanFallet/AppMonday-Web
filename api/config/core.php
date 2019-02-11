@@ -10,7 +10,7 @@ header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 // Generate utils methods
 
 // In main config file:
-// getEnvironment(), getDBHost(), getDBUsername(), getDBPassword(), getEncryptionKeyDC(), getEncryptionKeyPost()
+// getDBHost(), getDBUsername(), getDBPassword()
 
 // Read data from request
 $method = $_SERVER["REQUEST_METHOD"];
