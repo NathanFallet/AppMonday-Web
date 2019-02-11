@@ -4,9 +4,9 @@
 var loaded_apps = 0;
 
 // Ajax Query
-function ajaxPost(url, data, callback, progress) {
+function ajaxPost(url, method, data, callback, progress) {
     var req = new XMLHttpRequest();
-    req.open("POST", url);
+    req.open(method, url);
     req.addEventListener("load", function () {
         if (req.status >= 200 && req.status < 400) {
             callback(req.responseText);
@@ -22,7 +22,11 @@ function ajaxPost(url, data, callback, progress) {
     }
     req.setRequestHeader("Content-Type", "application/json");
     data = JSON.stringify(data);
-    req.send(data);
+    if(data !== undefined) {
+      req.send(data);
+    } else {
+      req.send();
+    }
 }
 
 // Form validation
@@ -34,25 +38,18 @@ document.getElementById('form').onsubmit = function(){
   var description = document.getElementById('description').value.trim();
   if(name !== '' && user !== '' && link !== '' && description !== '' && /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi.test(link)) {
     var data = {
-      method: "Web:submitApp()",
       name: name,
       user: user,
       link: link,
       logo: logo,
       description: description
     }
-    ajaxPost('https://api.appmonday.xyz/index.php', data, function response(response) {
+    ajaxPost('https://api.appmonday.xyz/project/project.php', 'POST', data, function response(response) {
       var data = JSON.parse(response);
       if(data.success){
         success();
       }else{
-        if(data.error === 'error_all_fields_required'){
-          error('Please fill all inputs with correct values!');
-        }else if(data.error === 'error_name_or_link_already_taken'){
-          error('An app with this name or this link was already submitted!');
-        }else{
-          error('We are sorry but something went wrong...');
-        }
+        error('We are sorry but something went wrong... Check your filled everything correctly, or maybe your already submitted this project.');
       }
     });
   }else{
@@ -64,22 +61,14 @@ document.getElementById('form').onsubmit = function(){
 // App list
 function loadApps() {
   var applist = document.getElementById('applist');
-  var data = {
-    method: "Web:getApps()",
-    start: window.loaded_apps,
-    limit: 10
-  }
-  ajaxPost('https://api.appmonday.xyz/index.php', data, function response(response) {
+  ajaxPost('https://api.appmonday.xyz/project/project.php?start='+window.loaded_apps+'&limit=10', 'GET', undefined, function response(response) {
     var data = JSON.parse(response);
-    if(data.success){
-      delete data['success'];
-      for(var app in data) {
-        applist.appendChild(createAppElement(data[app]));
-        window.loaded_apps++;
-      }
-      if(window.loaded_apps == 0) {
-        applist.innerHTML = '<p>No apps have been introduced for now, but you can already <a onclick="show(\'second\')">submit your app here</a>!</p><p>Come back on Monday, Dec 24 to see the first app.</p>';
-      }
+    for(var app in data) {
+      applist.appendChild(createAppElement(data[app]));
+      window.loaded_apps++;
+    }
+    if(window.loaded_apps == 0) {
+      applist.innerHTML = '<p>No apps have been introduced for now, but you can already <a onclick="show(\'second\')">submit your app here</a>!</p><p>Come back on Monday, Dec 24 to see the first app.</p>';
     }
   });
 }

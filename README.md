@@ -11,7 +11,7 @@ Here is the website of AppMonday, divided in two folders:
 ## MySQL database
 
 ```sql
-CREATE TABLE `apps` (
+CREATE TABLE `projects` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL DEFAULT '',
   `user` varchar(255) NOT NULL DEFAULT '',
