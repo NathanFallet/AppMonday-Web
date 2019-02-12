@@ -11,11 +11,21 @@ Here is the website of AppMonday, divided in two folders:
 ## MySQL database
 
 ```sql
+CREATE TABLE `competitions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL DEFAULT '',
+  `description` text NOT NULL,
+  `criterias` text NOT NULL,
+  `start` datetime NOT NULL,
+  `end` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
 CREATE TABLE `notification_tokens` (
   `ios_device_token` varchar(255) NOT NULL DEFAULT '',
   `android_reg_id` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`ios_device_token`,`android_reg_id`)
-)
+);
 
 CREATE TABLE `projects` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
