@@ -38,6 +38,14 @@ CREATE TABLE `projects` (
   `publish` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 );
+
+CREATE TABLE `tips` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL DEFAULT '',
+  `description` text NOT NULL,
+  `publish` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
 ```
 
 ## Mobile apps

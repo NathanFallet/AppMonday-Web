@@ -36,9 +36,9 @@ class CompetitionsManager {
   // Get a list of competitions
   public function getList($start, $limit) {
     // Select competitions datas from database
-    $projects = $this->getCompetitions('', $start, $limit, array());
+    $competitions = $this->getCompetitions('', $start, $limit, array());
 
-    return $projects;
+    return $competitions;
   }
 
   // Utils
