@@ -53,7 +53,7 @@ class TipsManager {
     // Proccess data
     $tips = array();
     while($data = $sql->fetch()){
-      $tips[] = new Tip(array('id' => $data['id'], 'name' => $data['name'], 'description' => $data['description'], 'publish' => $data['publish']));
+      $tips[] = new Tip(array('id' => $data['id'], 'name' => $data['name'], 'user' => $data['user'], 'description' => $data['description'], 'publish' => $data['publish']));
     }
     return $tips;
   }

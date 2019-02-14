@@ -7,6 +7,7 @@ class Tip {
   // Object attributes
   private $_id;
   private $_name;
+  private $_user;
   private $_description;
   private $_publish;
 
@@ -18,6 +19,7 @@ class Tip {
   // Getters
   public function getId() { return $this->_id; }
   public function getName() { return $this->_name; }
+  public function getUser() { return $this->_user; }
   public function getDescription() { return $this->_description; }
   public function getPublish() { return $this->_publish; }
 
@@ -32,6 +34,12 @@ class Tip {
   public function setName($name) {
     if (is_string($name)) {
       $this->_name = $name;
+    }
+  }
+
+  public function setUser($user) {
+    if (is_string($user)) {
+      $this->_user = $user;
     }
   }
 
@@ -59,7 +67,7 @@ class Tip {
 
   // Convert to an array (for JSON)
   public function toArray() {
-    return array('id' => $this->getId(), 'name' => $this->getName(), 'description' => $this->getDescription(), 'publish' => $this->getPublish());
+    return array('id' => $this->getId(), 'name' => $this->getName(), 'user' => $this->getUser(), 'description' => $this->getDescription(), 'publish' => $this->getPublish());
   }
 
   // Utils
